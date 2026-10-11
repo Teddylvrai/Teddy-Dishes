@@ -1,0 +1,28 @@
+:root{
+    --soft-blossom: #E9B8C0;
+    --rosy-copper: #CD4E40;
+    --camel: #C79364;
+    --soft-blush : #F2DEDD;
+    --raspberry: #CE4047;
+    --rasperry-fonce: #A5231C;
+    --brun: #3E1613;
+}
+
+.accueil-recette{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('../img/fond-recettes.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.accueil-recette h1{
+    margin-left:  450px;
+    margin-right: 450px;
+    color: white;
+}

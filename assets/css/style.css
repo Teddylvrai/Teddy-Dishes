@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --soft-blossom: #E9B8C0;
+    --rosy-copper: #CD4E40;
+    --camel: #C79364;
+    --soft-blush : #F2DEDD;
+    --raspberry: #CE4047;
+    --rasperry-fonce: #A5231C;
+    --brun: #3E1613;
+}
+
+/*
+Soft Blossom : #E9B8C0 (couleur header, footer)
+Rosy Copper : #CD4E40 (couleur texte acceuil footer, petit texte)
+Camel : #C79364
+Soft Blush : #F2DEDD (couleur de fond)
+Raspberry : #CE4047 ( Gros texte, couleur bouton)
+*/
+
+html{
+    background-color: var(--soft-blush);
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-family: 'Fraunces', serif;
+}
+
+header{
+    background-color: var(--soft-blossom);
+    height: 100px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-selection {
+    display: flex;
+    gap: 30px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+header a:hover{
+    color: var(--rosy-copper);
+    transition: color 0.2s ease;
+}
+
+header a.active{
+    color: var(--rosy-copper);
+    font-weight: bold;
+}
+
+.logo{
+    height: 140px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.accueil{
+    background-image: url('../img/fond-accueil.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.phrase-accroche{
+    font-size: 20px;
+    color: var(--rosy-copper);
+    text-transform: capitalize;
+}
+
+.titre{
+    font-size: 50px;
+    color: var(--rasperry-fonce);
+}
+
+.sous-titre{
+    font-size: 35px;
+    color: var(--rosy-copper);
+}
+
+.phrase-accueil{
+    margin-left: 50px;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.search {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid var(--brun);
+    border-radius: 50px;
+    padding: 6px 10px 6px 16px;
+    width: 250px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 15px;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--rasperry-fonce);
+    color: #ffffff;
+    width: 40px; 
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search button:hover {
+    background: var(--raspberry);
+}
+
+.search svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+}
+
+.categorie h2{
+    margin: 25px;
+    font-size: 30px;
+}
+
+.fleche{
+    color: var(--rasperry-fonce);
+    font-weight: bold;
+}
+
+.regroupement-categ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 130px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.regroupement-categ a {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid var(--camel);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.regroupement-categ a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.regroupement-categ p{
+    font-size: 20px;
+}
+
+.dej{
+    background-color: var(--rasperry-fonce);
+    color: antiquewhite;
+}
+
+.plats{
+    background-color: var(--raspberry);
+    color: antiquewhite;
+}
+
+.dessert{
+    background-color: var(--raspberry);
+    color: antiquewhite;
+}
+
+.snack{
+    background-color: var(--soft-blossom);
+    color: black;
+}
+
+.boisson{
+    background-color: var(--camel);
+    color: black;
+}
+
+.recette-entete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.recettes-phare{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 100px;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.recettes-populaire h2{
+    margin: 25px;
+    font-size: 30px;
+}
+
+.vp{
+    text-decoration: none;
+    color: var(--rasperry-fonce);
+}
+
+.vp:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.carte-recette {
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.carte-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carte-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.btn-recette{
+    display: inline-block;
+    width: fit-content;
+    background-color: var(--raspberry);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn-recette:hover{
+    background-color: var(--rasperry-fonce);
+    transform: translateY(-2px);
+}
+
+.selection-teddy {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--soft-blossom); /* Ton rose/cuivré */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+    margin-left: 388px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.selection-contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.selection-infos-ligne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.selection-img {
+    width: 350px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.footer{
+    height: auto;
+    background-color: var(--soft-blossom);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid var(--rasperry-fonce);
+}
+
+/* ==========================================================
+   PAGE DETAIL RECETTE
+   #F2DEDD fond | #E9B8C0 header | #CD4E40 petit texte
+   #C79364 camel | #CE4047 raspberry | #A5231C titres
+   ========================================================== */
+
+.detail-recette {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 5% 80px;
+}
+
+/* ---------- Titre ---------- */
+.detail-recette h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    color: var(--rasperry-fonce);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ---------- Image ---------- */
+.detail-recette #img-recette {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid var(--camel);
+}
+
+/* ---------- Temps | difficulté ---------- */
+.detail-recette > p {
+    width: fit-content;
+    margin: -22px auto 0;
+    position: relative; 
+    padding: 10px 28px;
+    background-color: #ffffff;
+    border: 2px solid var(--camel);
+    border-radius: 50px;
+    color: var(--rosy-copper);
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ---------- Titres de sections---------- */
+.detail-recette h2 {
+    font-size: 30px;
+    margin: 50px 0 20px;
+}
+
+.detail-recette h2::before {
+    content: ">";
+    color: var(--rasperry-fonce);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ---------- Ingrédients ---------- */
+#liste-ingredients {
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 25px;
+}
+
+#liste-ingredients li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    font-size: 17px;
+    border-bottom: 1px dashed var(--camel);
+}
+
+#liste-ingredients li:last-child {
+    border-bottom: none;
+}
+
+#liste-ingredients li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--raspberry);
+}
+
+/* ---------- Étapes ---------- */
+#liste-etapes {
+    list-style: none;
+    counter-reset: etape;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#liste-etapes li {
+    counter-increment: etape;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px 25px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#liste-etapes li::before {
+    content: counter(etape);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--raspberry);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .detail-recette h1 {
+        font-size: 34px;
+    }
+
+    .detail-recette #img-recette {
+        height: 240px;
+    }
+
+    .detail-recette > p {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .detail-recette h2 {
+        font-size: 25px;
+    }
+
+    #liste-etapes li {
+        padding: 16px;
+        gap: 14px;
+    }
+}
+
+/* ==========================================================
+   SUGGESTIONS DE LA BARRE DE RECHERCHE
+   ========================================================== */
+
+/* Sert de repère pour placer la liste juste en dessous de la barre */
+.search {
+    position: relative;
+}
+
+/* ---------- La liste déroulante ---------- */
+#suggestion {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -2px;
+    right: -2px;
+    z-index: 10;
+    background-color: #ffffff;
+    border: 2px solid var(--brun);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#suggestion:empty {
+    display: none;
+}
+
+/* ---------- Une suggestion ---------- */
+.suggestion {
+    display: block;
+    padding: 10px 18px;
+    font-size: 15px;
+    color: var(--brun);
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-bottom: 1px dashed var(--camel);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.suggestion:last-child {
+    border-bottom: none;
+}
+
+.suggestion:hover,
+.suggestion:focus-visible {
+    background-color: var(--soft-blossom);
+    color: var(--rasperry-fonce);
+    outline: none;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Dishes</title>
+    <link rel="icon" type="image/png" href="assets/img/logo-tete.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/Teddy Dishes.svg" alt="Logo Teddy Dishes" class="logo"></a>
+        <div class="header-selection">
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#categorie">Catégories</a>
+            <a href="#recettes">Recettes</a>
+            <a href="favoris.html">Favoris</a>
+        </div>
+    </header>
+    <main>
+        <section class="accueil" id="accueil">
+            <div class="phrase-accueil">
+                <p class="phrase-accroche">Des Recettes simplement gourmandes</p>
+                <h1 class="titre">Teddy Dishes</h1>
+                <span class="sous-titre">Le bonheur est dans l'assiette</span>
+                <div class="search">
+                    <input type="search" id="search" placeholder="Rechercher une recette...">
+
+                    <button type="submit" aria-label="Rechercher">
+                        <i data-lucide="search"></i>
+                    </button>
+                    <div id="suggestion"></div>
+                </div>
+            </div>
+        </section>
+        <section class="categorie" id="categorie">
+            <h2><span class="fleche">></span> Explorer par Catégorie</h2>
+            <div class="regroupement-categ">
+                <a href="recettes.html?categorie=petit-dejeuner" class="dej" id="petit-dejeuner">
+                    <p class="icon">🥞</p>
+                    <p>Petit-déjeuner</p>
+                </a>
+                <a href="recettes.html?categorie=plats" class="plats" id="plats">
+                    <p class="icon">🍲</p>
+                    <p>Plats</p>
+                </a>
+                <a href="recettes.html?categorie=desserts" class="dessert" id="dessert">
+                    <p class="icon">🍰</p>
+                    <p>Desserts</p>
+                </a>
+                <a href="recettes.html?categorie=snacks" class="snack" id="snacks">
+                    <p class="icon">🍟</p>
+                    <p>Snacks</p>
+                </a>
+                <a href="recettes.html?categorie=boissons" class="boisson" id="boissons">
+                    <p class="icon">🧋</p>
+                    <p>Boissons</p>
+                </a>
+            </div>
+        </section>
+        <section class="recettes-populaire" id="recettes">
+            <div class="recette-entete">
+                <h2 class="titre-recettes"><span class="fleche">></span> Recettes Populaires</h2>
+                <a href="recettes.html" class="vp">Voir toutes -></a>
+            </div>
+            <div class="recettes-phare">
+                <div class="carte-recette">
+                    <img src="assets/img/pancakes.jpg" alt="Pancake" class="carte-img">
+                    <h3>Pancakes</h3>
+                    <div class="carte-info">
+                        <img src="assets/img/timer.png" alt="timer">
+                        <p>14 min</p>
+                        <img src="assets/img/chapeau-chef.png" alt="chapeau-chef">
+                        <p>Très facile</p>
+                    </div>
+                    <a href="detail-recettes.html?id=pancakes" class="btn-recette">Decouvrir la recette</a>
+                </div>
+                <div class="carte-recette">
+                    <img src="assets/img/financiers.jpg" alt="financiers" class="carte-img">
+                    <h3>financiers aux amandes</h3>
+                    <div class="carte-info">
+                        <img src="assets/img/timer.png" alt="timer">
+                        <p>20 min</p>
+                        <img src="assets/img/chapeau-chef.png" alt="chapeau-chef">
+                        <p>Facile</p>
+                    </div>
+                    <a href="detail-recettes.html?id=financiers" class="btn-recette">Decouvrir la recette</a>
+                </div>
+                <div class="carte-recette">
+                    <img src="assets/img/ratatouille.jpg" alt="ratatouille" class="carte-img">
+                    <h3>La ratatouille</h3>
+                    <div class="carte-info">
+                        <img src="assets/img/timer.png" alt="timer">
+                        <p>1h20</p>
+                        <img src="assets/img/chapeau-chef.png" alt="chapeau-chef">
+                        <p>Moyenne</p>
+                    </div>
+                    <a href="detail-recettes.html?id=ratatouille" class="btn-recette">Decouvrir la recette</a>
+                </div>
+            </div>
+        </section>
+        <section class="recette-pref">
+            <div class="selection-teddy">
+                <div class="selection-contenu">
+                    <p class="sur-titre">LA RECETTE DU MOMENT</p>
+                    <h3>Les madeleines de Teddy</h3>      
+                    <div class="selection-infos-ligne">
+                        <img src="assets/img/timer.png" alt="timer" style="width: 20px; height: 20px;">
+                        <p>20 min</p>
+                        <img src="assets/img/chapeau-chef.png" alt="chapeau-chef" style="width: 20px; height: 20px;">
+                        <p>Très facile</p>
+                    </div>
+
+                    <a href="detail-recettes.html?id=madeleine" class="btn-recette">Découvrir la recette</a>
+                </div>
+                <div>
+                    <img src="assets/img/madeleine.jpg" alt="madeleine" class="selection-img">
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <img src="assets/img/1.svg" alt="logo-teddy-dishes" class="logo">
+            <p>© 2026 - Teddy Rouvray, Licence GNU GPLv3</p>
+        </footer>
+    </main>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
