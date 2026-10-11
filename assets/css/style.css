@@ -546,3 +546,145 @@ header a.active{
     color: var(--rasperry-fonce);
     outline: none;
 }
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* ---------- TABLETTE : écran de 900px ou moins ---------- */
+@media (max-width: 900px) {
+
+    .accueil {
+        background-attachment: scroll;
+    }
+
+    .regroupement-categ {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 20px;
+    }
+
+    .recettes-phare {
+        padding: 0 20px;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .selection-teddy {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 20px;
+        box-sizing: border-box;
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .selection-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 120px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5%;
+        gap: 8px;
+    }
+
+    .logo {
+        height: 60px;
+        margin-top: 0;
+    }
+
+    .header-selection {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+
+    /* Accueil */
+    .accueil {
+        height: auto;
+        min-height: 300px;
+        padding: 40px 5%;
+    }
+
+    .phrase-accueil {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .titre {
+        font-size: 36px;
+    }
+
+    .sous-titre {
+        font-size: 24px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+
+    /* Titres de sections */
+    .categorie h2,
+    .recettes-populaire h2 {
+        font-size: 24px;
+        margin: 20px;
+    }
+
+    .regroupement-categ {
+        gap: 15px;
+    }
+
+    .regroupement-categ a {
+        width: 140px;
+        height: 140px;
+    }
+
+    .regroupement-categ p {
+        font-size: 17px;
+    }
+
+    .carte-recette {
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+        gap: 10px;
+    }
+
+    .footer .logo {
+        height: 100px;
+        margin-top: 0;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+/*
+========================================================
+ 1er version responsive
+========================================================
+*/
