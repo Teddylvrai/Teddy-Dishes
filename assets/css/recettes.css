@@ -26,3 +26,13 @@
     margin-right: 450px;
     color: white;
 }
+
+@media (max-width: 600px) {
+
+    .accueil-recette h1{
+        margin-left:  0px;
+        margin-right: 0px;
+        font-size: 36px;
+    }
+
+}
