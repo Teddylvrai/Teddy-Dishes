@@ -477,7 +477,7 @@ header a.active{
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .detail-recette h1 {
         font-size: 40px;
     }
