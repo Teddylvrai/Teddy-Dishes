@@ -17,6 +17,7 @@
     height: 300px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 5%;
     position: relative;
 }
@@ -27,12 +28,11 @@
     color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
 
     .accueil-recette h1{
-        margin-left:  0px;
-        margin-right: 0px;
         font-size: 36px;
+        margin: 0;
     }
 
 }

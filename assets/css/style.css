@@ -71,6 +71,10 @@ header a.active{
     margin-top: 20px;
 }
 
+.menu-toggle, .burger {
+    display: none;
+}
+
 .accueil{
     background-image: url('../img/fond-accueil.svg');
     background-size: cover;
@@ -473,9 +477,9 @@ header a.active{
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 600px) {
+@media (max-width: 760px) {
     .detail-recette h1 {
-        font-size: 34px;
+        font-size: 40px;
     }
 
     .detail-recette #img-recette {
@@ -483,12 +487,12 @@ header a.active{
     }
 
     .detail-recette > p {
-        font-size: 14px;
+        font-size: 30px;
         padding: 8px 20px;
     }
 
     .detail-recette h2 {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     #liste-etapes li {
@@ -586,32 +590,82 @@ header a.active{
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     html {
         scroll-padding-top: 120px;
     }
 
     header {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 10px 5%;
         gap: 8px;
     }
 
     .logo {
-        height: 60px;
+        height: 100px;
         margin-top: 0;
     }
 
-    .header-selection {
+    /*.header-selection {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+    }*/
+
+    .header-selection a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 16px;
+        border: 1px dashed var(--camel);
+        border-radius: 44px;
     }
 
-    header a {
-        font-size: 14px;
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .burger span{
+        width: 26px;
+        height: 3px;
+        background: #333;
+        border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .header-selection{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: var(--soft-blossom);
+        padding: 1rem 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle:checked ~ .header-selection {
+        display: flex;
+    }
+
+    .menu-toggle:checked + .burger span:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .burger span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .burger span:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     /* Accueil */
